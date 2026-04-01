@@ -70,10 +70,10 @@
 
 ### Admin View
 
-- [ ] **ADMN-01**: Admin can view cross-team performance comparison
-- [ ] **ADMN-02**: Admin can configure point values for activity types
-- [ ] **ADMN-03**: Admin can manage tier thresholds and promotion rules
-- [ ] **ADMN-04**: Admin sees engagement analytics (activity trends, gamification impact)
+- [x] **ADMN-01**: Admin can view cross-team performance comparison
+- [x] **ADMN-02**: Admin can configure point values for activity types
+- [x] **ADMN-03**: Admin can manage tier thresholds and promotion rules
+- [x] **ADMN-04**: Admin sees engagement analytics (activity trends, gamification impact)
 
 ### Conversion Funnel
 
@@ -182,10 +182,10 @@
 | MGMT-02 | Phase 3 | Pending |
 | MGMT-03 | Phase 3 | Pending |
 | MGMT-04 | Phase 3 | Pending |
-| ADMN-01 | Phase 3 | Pending |
-| ADMN-02 | Phase 3 | Pending |
-| ADMN-03 | Phase 3 | Pending |
-| ADMN-04 | Phase 3 | Pending |
+| ADMN-01 | Phase 3 | Complete |
+| ADMN-02 | Phase 3 | Complete |
+| ADMN-03 | Phase 3 | Complete |
+| ADMN-04 | Phase 3 | Complete |
 | SEED-01 | Phase 4 | Pending |
 | SEED-02 | Phase 4 | Pending |
 | SEED-03 | Phase 4 | Pending |
