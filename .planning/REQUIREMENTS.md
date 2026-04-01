@@ -90,9 +90,9 @@
 
 ### Animations
 
-- [ ] **ANIM-01**: Rank shift animation -- rows physically slide to new position (600ms ease-in-out with cyan glow)
-- [ ] **ANIM-02**: XP counter tick -- numbers count up from old to new value (400ms) with floating "+XP" indicator
-- [ ] **ANIM-03**: Deal bell drop -- notification slides down with slight bounce
+- [x] **ANIM-01**: Rank shift animation -- rows physically slide to new position (600ms ease-in-out with cyan glow)
+- [x] **ANIM-02**: XP counter tick -- numbers count up from old to new value (400ms) with floating "+XP" indicator
+- [x] **ANIM-03**: Deal bell drop -- notification slides down with slight bounce
 
 ### Demo Data
 
@@ -193,9 +193,9 @@
 | SEED-05 | Phase 4 | Pending |
 | SEED-06 | Phase 4 | Pending |
 | SEED-07 | Phase 4 | Pending |
-| ANIM-01 | Phase 4 | Pending |
-| ANIM-02 | Phase 4 | Pending |
-| ANIM-03 | Phase 4 | Pending |
+| ANIM-01 | Phase 4 | Complete |
+| ANIM-02 | Phase 4 | Complete |
+| ANIM-03 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 57 total

@@ -90,4 +90,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation | 0/2 | Not started | - |
 | 2. Core Game Loop | 0/2 | Not started | - |
 | 3. Competitions and Role Views | 0/3 | Not started | - |
-| 4. Demo Data and Polish | 0/2 | Not started | - |
+| 4. Demo Data and Polish | 1/2 | In Progress|  |
