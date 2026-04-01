@@ -7,10 +7,10 @@
 
 ### Authentication
 
-- [ ] **AUTH-01**: User can log in with email and password (3 demo accounts: rep, manager, admin)
-- [ ] **AUTH-02**: User session persists across browser refresh via secure cookies
-- [ ] **AUTH-03**: User can log out from any page
-- [ ] **AUTH-04**: Role-based access control routes users to appropriate views (rep, manager, admin)
+- [x] **AUTH-01**: User can log in with email and password (3 demo accounts: rep, manager, admin)
+- [x] **AUTH-02**: User session persists across browser refresh via secure cookies
+- [x] **AUTH-03**: User can log out from any page
+- [x] **AUTH-04**: Role-based access control routes users to appropriate views (rep, manager, admin)
 
 ### Leaderboard
 
@@ -81,10 +81,10 @@
 
 ### Layout & Design
 
-- [ ] **DSGN-01**: Dark scoreboard theme (bg: #0A0E17) with neon cyan accents (#06D6F2)
+- [x] **DSGN-01**: Dark scoreboard theme (bg: #0A0E17) with neon cyan accents (#06D6F2)
 - [ ] **DSGN-02**: Full-width stacked ticker layout with NO sidebar navigation
 - [ ] **DSGN-03**: Thin top bar (48px) with tab navigation (Live Board, Battles, Challenges)
-- [ ] **DSGN-04**: Typography: Barlow Condensed for headings/ranks, JetBrains Mono for data
+- [x] **DSGN-04**: Typography: Barlow Condensed for headings/ranks, JetBrains Mono for data
 - [ ] **DSGN-05**: All 24 pre-generated SVG/PNG assets used as documented in DESIGN-SPEC.md
 - [ ] **DSGN-06**: Responsive design for desktop and tablet viewports
 
@@ -139,14 +139,14 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
-| AUTH-03 | Phase 1 | Pending |
-| AUTH-04 | Phase 1 | Pending |
-| DSGN-01 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
+| AUTH-03 | Phase 1 | Complete |
+| AUTH-04 | Phase 1 | Complete |
+| DSGN-01 | Phase 1 | Complete |
 | DSGN-02 | Phase 1 | Pending |
 | DSGN-03 | Phase 1 | Pending |
-| DSGN-04 | Phase 1 | Pending |
+| DSGN-04 | Phase 1 | Complete |
 | DSGN-05 | Phase 1 | Pending |
 | DSGN-06 | Phase 1 | Pending |
 | LEAD-01 | Phase 2 | Pending |
