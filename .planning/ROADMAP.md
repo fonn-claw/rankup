@@ -43,12 +43,11 @@ Plans:
   3. Rep sees their pinned position with concrete gap-to-next-rank ("2 calls to pass #6") and top 3 rows have visual emphasis
   4. Streak tracking shows flame icon with day count for active streaks, muted indicator for broken streaks, and pulsing amber for at-risk streaks
   5. When a deal closes, a notification bar slides down showing rep name, deal details, and XP earned, visible to all users
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md — Data layer: leaderboard queries, activity server action, streak/funnel queries, deal bell API, usePolling hook
+- [ ] 02-02-PLAN.md — Scoreboard UI: board page, ranked rows, pinned position, filters, FAB, deal bell, streak indicators
 
 ### Phase 3: Competitions and Role Views
 **Goal**: Teams compete in weekly battles, managers run SPIFFs and monitor coaching opportunities, admins configure the system
@@ -89,6 +88,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/2 | Not started | - |
-| 2. Core Game Loop | 0/3 | Not started | - |
+| 2. Core Game Loop | 0/2 | Not started | - |
 | 3. Competitions and Role Views | 0/3 | Not started | - |
 | 4. Demo Data and Polish | 0/2 | Not started | - |
