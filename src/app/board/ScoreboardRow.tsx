@@ -1,7 +1,7 @@
 'use client'
 
 import { TierBadge } from '@/components/TierBadge'
-import { FlameIcon, ArrowUpIcon, ArrowDownIcon } from '@/components/icons'
+import { FlameIcon, ArrowUpIcon, ArrowDownIcon, TargetIcon } from '@/components/icons'
 
 interface ScoreboardRowProps {
   rank: number
@@ -16,6 +16,8 @@ interface ScoreboardRowProps {
   isCurrentUser: boolean
   maxXp: number
   streakAtRisk: boolean
+  conversionRate?: number | null
+  coachingFlag?: boolean
 }
 
 const TIER_BORDER_COLORS: Record<string, string> = {
@@ -37,6 +39,8 @@ export function ScoreboardRow({
   isCurrentUser,
   maxXp,
   streakAtRisk,
+  conversionRate,
+  coachingFlag,
 }: ScoreboardRowProps) {
   const bgClass =
     rank % 2 === 0 ? 'bg-bg-primary' : 'bg-bg-surface'
@@ -151,6 +155,18 @@ export function ScoreboardRow({
           <span className="font-data text-sm text-text-muted">&mdash;</span>
         )}
       </div>
+
+      {/* Conversion rate (manager view only) */}
+      {conversionRate !== undefined && (
+        <div className="w-16 shrink-0 flex items-center justify-end gap-1">
+          {coachingFlag && (
+            <TargetIcon className="w-3.5 h-3.5 text-accent-amber" />
+          )}
+          <span className="font-data text-xs text-text-secondary">
+            {conversionRate !== null ? `${conversionRate.toFixed(1)}%` : '\u2014'}
+          </span>
+        </div>
+      )}
 
       {/* Streak */}
       <div className="w-14 shrink-0 flex items-center justify-end">

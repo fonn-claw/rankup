@@ -2,9 +2,11 @@ import { getSession } from '@/lib/auth/session'
 import { getLeaderboard, getPreviousRanks, getTier } from '@/lib/queries/leaderboard'
 import { getStreaks } from '@/lib/queries/streaks'
 import { getFunnel } from '@/lib/queries/funnel'
+import { getTeamHeatmap } from '@/lib/queries/heatmap'
 import { db } from '@/lib/db'
 import { teams } from '@/lib/db/schema'
 import { BoardClient } from './BoardClient'
+import { ManagerBoardClient } from './ManagerBoardClient'
 import type { BoardRow } from './BoardClient'
 
 export default async function BoardPage({
@@ -37,6 +39,25 @@ export default async function BoardPage({
     streak: streakMap.get(row.userId) ?? null,
   }))
 
+  // Manager view: show heatmap + conversion rates + SPIFF creation
+  if (session.role === 'manager') {
+    const heatmapData = await getTeamHeatmap()
+
+    return (
+      <ManagerBoardClient
+        initialRows={rows}
+        currentUserId={session.userId}
+        currentUserName={session.name}
+        teams={teamsList}
+        funnelData={funnelData}
+        currentPeriod={period}
+        currentTeamId={teamId}
+        heatmapData={heatmapData}
+      />
+    )
+  }
+
+  // Rep view: standard board
   return (
     <BoardClient
       initialRows={rows}
