@@ -16,18 +16,18 @@ Sales reps can see their live rank and know exactly what activity it takes to mo
 - ✓ Dark scoreboard theme with neon accents, full-width layout, correct typography — Phase 1
 - ✓ All 24 pre-generated assets integrated — Phase 1
 - ✓ Responsive design for desktop and tablet — Phase 1
+- ✓ Live leaderboard with rank, XP, tier badges, streaks, and movement indicators — Phase 2
+- ✓ Activity logging (calls, meetings, demos, proposals, deals) with XP rewards — Phase 2
+- ✓ Tiered competition system (Bronze, Silver, Gold) — Phase 2
+- ✓ Activity streak tracking with consecutive business-day motivation — Phase 2
+- ✓ Deal bell notifications visible to the whole team — Phase 2
+- ✓ Conversion funnel visibility (calls → meetings → demos → deals per rep) — Phase 2
 
 ### Active
-- [ ] Live leaderboard with rank, XP, tier badges, streaks, and movement indicators
-- [ ] Activity logging (calls, meetings, demos, proposals, deals) with XP rewards
-- [ ] Tiered competition system (Bronze, Silver, Gold) with monthly promotions
-- [ ] Activity streak tracking with consecutive day motivation
 - [ ] Team battles (pod vs pod) with weekly XP competition
 - [ ] SPIFFs/challenges with countdown timers and progress tracking
-- [ ] Deal bell notifications visible to the whole team
 - [ ] Manager command center with team heatmap and coaching indicators
 - [ ] Admin cross-team analytics and configuration
-- [ ] Conversion funnel visibility (calls → meetings → demos → deals per rep)
 - [ ] Realistic demo data: 15 reps, 3 pods, 2 months of activity history
 
 ### Out of Scope
@@ -69,4 +69,4 @@ Sales reps can see their live rank and know exactly what activity it takes to mo
 | Single database schema, no multi-tenancy | Demo for one org ("Velocity SaaS"), no need for tenant isolation | — Pending |
 
 ---
-*Last updated: 2026-04-01 after Phase 1 completion*
+*Last updated: 2026-04-01 after Phase 2 completion*
