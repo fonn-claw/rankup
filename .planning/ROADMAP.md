@@ -27,11 +27,11 @@ RankUp delivers a live sales gamification scoreboard in four phases: foundation 
   3. App displays dark scoreboard theme with neon cyan accents, full-width layout with no sidebar, thin top bar navigation, and correct typography
   4. All 24 pre-generated SVG/PNG assets are integrated and rendering correctly
   5. Layout is responsive across desktop and tablet viewports
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Project scaffold, database schema, auth flow, design tokens
+- [ ] 01-02-PLAN.md — Layout shell, TopBar navigation, SVG icon components, responsive design
 
 ### Phase 2: Core Game Loop
 **Goal**: Reps can log activities, earn XP, see their live rank on the leaderboard, track streaks, and the whole team sees deal bell notifications
