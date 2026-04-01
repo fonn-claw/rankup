@@ -58,12 +58,12 @@ Plans:
   2. Manager can create a time-limited SPIFF challenge and reps see it with title, progress bar, and countdown timer
   3. Manager sees team activity heatmap (green/amber/red), scoreboard with conversion rates, and coaching flags for high-activity low-conversion reps
   4. Admin can view cross-team comparison, configure point values for activity types, manage tier thresholds, and see engagement analytics
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
-- [ ] 03-03: TBD
+- [ ] 03-01-PLAN.md — Schema additions, battle/challenge queries, Battles & Challenges page with versus layout and SPIFF cards
+- [ ] 03-02-PLAN.md — Manager command center: heatmap strip, conversion rates, coaching flags, SPIFF creation panel
+- [ ] 03-03-PLAN.md — Admin configuration panel: cross-team comparison, point/tier config, engagement analytics
 
 ### Phase 4: Demo Data and Polish
 **Goal**: The app tells a compelling demo story with realistic data and feels alive with animations
