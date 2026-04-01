@@ -1,54 +1,51 @@
 import { getSession } from '@/lib/auth/session'
-import Image from 'next/image'
+import { getLeaderboard, getPreviousRanks, getTier } from '@/lib/queries/leaderboard'
+import { getStreaks } from '@/lib/queries/streaks'
+import { getFunnel } from '@/lib/queries/funnel'
+import { db } from '@/lib/db'
+import { teams } from '@/lib/db/schema'
+import { BoardClient } from './BoardClient'
+import type { BoardRow } from './BoardClient'
 
-export default async function BoardPage() {
+export default async function BoardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ period?: string; team?: string }>
+}) {
+  const params = await searchParams
+  const period = (['today', 'week', 'month', 'all'].includes(params.period ?? '')
+    ? params.period
+    : 'week') as 'today' | 'week' | 'month' | 'all'
+  const teamId = params.team ? parseInt(params.team, 10) || null : null
+
   const session = await getSession()
 
+  const [leaderboardRows, previousRanks, streaks, funnelData, teamsList] = await Promise.all([
+    getLeaderboard({ period, teamId }),
+    getPreviousRanks({ period, teamId }),
+    getStreaks(),
+    getFunnel(),
+    db.select({ id: teams.id, name: teams.name, slug: teams.slug }).from(teams),
+  ])
+
+  // Merge previous ranks and streaks into rows
+  const streakMap = new Map(streaks.map((s) => [s.userId, { count: s.currentStreak, active: s.streakActive }]))
+
+  const rows: BoardRow[] = leaderboardRows.map((row) => ({
+    ...row,
+    prevRank: previousRanks.get(row.userId) ?? null,
+    streak: streakMap.get(row.userId) ?? null,
+  }))
+
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-6 space-y-6">
-      {/* Page heading */}
-      <h1 className="font-heading text-4xl font-bold text-accent-cyan tracking-wider">LIVE BOARD</h1>
-
-      {/* Your Position Banner */}
-      <div className="bg-bg-surface rounded-lg p-6 border-l-4 border-accent-cyan">
-        <div className="flex items-center gap-4">
-          <div>
-            <p className="font-heading text-2xl font-bold text-text-primary">{session.name}</p>
-            <p className="font-data text-sm text-text-secondary capitalize">{session.role}</p>
-          </div>
-          <div className="ml-auto text-right">
-            <p className="font-data text-sm text-text-muted">Scoreboard coming in Phase 2</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Rankings placeholder */}
-      <div>
-        <h2 className="font-heading text-xl font-semibold text-text-secondary tracking-wider mb-3">RANKINGS</h2>
-        <div className="space-y-0">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div
-              key={i}
-              className={`h-16 flex items-center justify-center ${
-                i % 2 === 0 ? 'bg-bg-primary' : 'bg-bg-surface'
-              }`}
-            >
-              {i === 3 && (
-                <Image
-                  src="/assets/empty-board.svg"
-                  alt="No activity yet"
-                  width={240}
-                  height={160}
-                  className="opacity-30"
-                />
-              )}
-            </div>
-          ))}
-        </div>
-        <p className="text-center font-data text-sm text-text-muted mt-4">
-          Live rankings will appear here once activity data is loaded
-        </p>
-      </div>
-    </div>
+    <BoardClient
+      initialRows={rows}
+      currentUserId={session.userId}
+      currentUserName={session.name}
+      teams={teamsList}
+      funnelData={funnelData}
+      currentPeriod={period}
+      currentTeamId={teamId}
+    />
   )
 }

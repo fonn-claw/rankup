@@ -14,7 +14,7 @@ export async function getFunnel(userId?: number): Promise<FunnelResult[]> {
     ? sql`AND a.user_id = ${userId}`
     : sql``
 
-  const result = await db.execute<FunnelResult>(sql`
+  const result = await db.execute<Record<string, unknown>>(sql`
     SELECT
       u.id AS "userId",
       COALESCE(COUNT(*) FILTER (WHERE a.type = 'call'), 0)::int AS calls,
@@ -28,5 +28,5 @@ export async function getFunnel(userId?: number): Promise<FunnelResult[]> {
     ORDER BY u.id
   `)
 
-  return result.rows
+  return result.rows as unknown as FunnelResult[]
 }
