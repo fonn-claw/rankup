@@ -12,11 +12,12 @@ Sales reps can see their live rank and know exactly what activity it takes to mo
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Role-based authentication (rep, manager, admin) with demo accounts — Phase 1
+- ✓ Dark scoreboard theme with neon accents, full-width layout, correct typography — Phase 1
+- ✓ All 24 pre-generated assets integrated — Phase 1
+- ✓ Responsive design for desktop and tablet — Phase 1
 
 ### Active
-
-- [ ] Role-based authentication (rep, manager, admin) with demo accounts
 - [ ] Live leaderboard with rank, XP, tier badges, streaks, and movement indicators
 - [ ] Activity logging (calls, meetings, demos, proposals, deals) with XP rewards
 - [ ] Tiered competition system (Bronze, Silver, Gold) with monthly promotions
@@ -68,4 +69,4 @@ Sales reps can see their live rank and know exactly what activity it takes to mo
 | Single database schema, no multi-tenancy | Demo for one org ("Velocity SaaS"), no need for tenant isolation | — Pending |
 
 ---
-*Last updated: 2026-04-01 after initialization*
+*Last updated: 2026-04-01 after Phase 1 completion*
