@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 32" width="140" height="32">
+  <text x="0" y="25" font-family="sans-serif" font-weight="700" font-size="26" fill="#F1F5F9" letter-spacing="1">RANK</text>
+  <text x="80" y="25" font-family="sans-serif" font-weight="700" font-size="26" fill="#06D6F2" letter-spacing="1" transform="rotate(-4, 80, 25)">UP</text>
+  <line x1="79" y1="28" x2="112" y2="24" stroke="#06D6F2" stroke-width="2" stroke-linecap="round"/>
+</svg>
