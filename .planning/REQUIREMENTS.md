@@ -18,7 +18,7 @@
 - [x] **LEAD-02**: Rep sees their own position pinned at top with gap-to-next-rank ("2 calls to pass #6")
 - [x] **LEAD-03**: Leaderboard supports time period filtering (Today, This Week, This Month, All Time)
 - [x] **LEAD-04**: Leaderboard supports team filtering (All, Alpha, Beta, Gamma)
-- [ ] **LEAD-05**: Top 3 rows have visual emphasis (left-border glow in tier color)
+- [x] **LEAD-05**: Top 3 rows have visual emphasis (left-border glow in tier color)
 - [x] **LEAD-06**: Rank movement arrows show position changes (up/down/stable)
 
 ### Activity & XP
@@ -32,15 +32,15 @@
 ### Tiers
 
 - [x] **TIER-01**: Reps are assigned tiers based on XP (Bronze: 0-5000, Silver: 5000-15000, Gold: 15000+)
-- [ ] **TIER-02**: Tier badges display on scoreboard rows using pre-generated SVG assets
-- [ ] **TIER-03**: Tier promotion is visible and celebrated when thresholds are crossed
+- [x] **TIER-02**: Tier badges display on scoreboard rows using pre-generated SVG assets
+- [x] **TIER-03**: Tier promotion is visible and celebrated when thresholds are crossed
 
 ### Streaks
 
 - [x] **STRK-01**: System tracks consecutive days of hitting minimum activity threshold (15+ calls)
-- [ ] **STRK-02**: Active streak displays flame icon with day count on scoreboard
-- [ ] **STRK-03**: Broken streak displays muted/strikethrough indicator
-- [ ] **STRK-04**: Streak at risk (end of day, no qualifying activity) shows pulsing amber indicator
+- [x] **STRK-02**: Active streak displays flame icon with day count on scoreboard
+- [x] **STRK-03**: Broken streak displays muted/strikethrough indicator
+- [x] **STRK-04**: Streak at risk (end of day, no qualifying activity) shows pulsing amber indicator
 
 ### Team Battles
 
@@ -59,7 +59,7 @@
 
 - [x] **BELL-01**: When a deal closes, a notification bar slides down visible to all users
 - [x] **BELL-02**: Deal bell shows rep name, deal name, amount, and XP earned
-- [ ] **BELL-03**: Deal bell auto-dismisses after 8 seconds, stacks if multiple fire
+- [x] **BELL-03**: Deal bell auto-dismisses after 8 seconds, stacks if multiple fire
 
 ### Manager View
 
@@ -153,7 +153,7 @@
 | LEAD-02 | Phase 2 | Complete |
 | LEAD-03 | Phase 2 | Complete |
 | LEAD-04 | Phase 2 | Complete |
-| LEAD-05 | Phase 2 | Pending |
+| LEAD-05 | Phase 2 | Complete |
 | LEAD-06 | Phase 2 | Complete |
 | ACTV-01 | Phase 2 | Complete |
 | ACTV-02 | Phase 2 | Complete |
@@ -161,15 +161,15 @@
 | ACTV-04 | Phase 2 | Complete |
 | ACTV-05 | Phase 2 | Complete |
 | TIER-01 | Phase 2 | Complete |
-| TIER-02 | Phase 2 | Pending |
-| TIER-03 | Phase 2 | Pending |
+| TIER-02 | Phase 2 | Complete |
+| TIER-03 | Phase 2 | Complete |
 | STRK-01 | Phase 2 | Complete |
-| STRK-02 | Phase 2 | Pending |
-| STRK-03 | Phase 2 | Pending |
-| STRK-04 | Phase 2 | Pending |
+| STRK-02 | Phase 2 | Complete |
+| STRK-03 | Phase 2 | Complete |
+| STRK-04 | Phase 2 | Complete |
 | BELL-01 | Phase 2 | Complete |
 | BELL-02 | Phase 2 | Complete |
-| BELL-03 | Phase 2 | Pending |
+| BELL-03 | Phase 2 | Complete |
 | FUNL-01 | Phase 2 | Complete |
 | BTTL-01 | Phase 3 | Pending |
 | BTTL-02 | Phase 3 | Pending |
