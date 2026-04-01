@@ -22,12 +22,12 @@ Sales reps can see their live rank and know exactly what activity it takes to mo
 - ✓ Activity streak tracking with consecutive business-day motivation — Phase 2
 - ✓ Deal bell notifications visible to the whole team — Phase 2
 - ✓ Conversion funnel visibility (calls → meetings → demos → deals per rep) — Phase 2
+- ✓ Team battles (pod vs pod) with weekly XP competition — Phase 3
+- ✓ SPIFFs/challenges with countdown timers and progress tracking — Phase 3
+- ✓ Manager command center with team heatmap and coaching indicators — Phase 3
+- ✓ Admin cross-team analytics and configuration — Phase 3
 
 ### Active
-- [ ] Team battles (pod vs pod) with weekly XP competition
-- [ ] SPIFFs/challenges with countdown timers and progress tracking
-- [ ] Manager command center with team heatmap and coaching indicators
-- [ ] Admin cross-team analytics and configuration
 - [ ] Realistic demo data: 15 reps, 3 pods, 2 months of activity history
 
 ### Out of Scope
@@ -69,4 +69,4 @@ Sales reps can see their live rank and know exactly what activity it takes to mo
 | Single database schema, no multi-tenancy | Demo for one org ("Velocity SaaS"), no need for tenant isolation | — Pending |
 
 ---
-*Last updated: 2026-04-01 after Phase 2 completion*
+*Last updated: 2026-04-01 after Phase 3 completion*
