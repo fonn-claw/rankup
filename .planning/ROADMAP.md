@@ -74,11 +74,11 @@ Plans:
   2. Leaderboard rows physically slide to new positions with 600ms animation and cyan glow when rank changes
   3. XP counter ticks up from old to new value with 400ms animation and floating "+XP" indicator appears on activity log
   4. Deal bell notification drops in with bounce animation and auto-dismisses after 8 seconds
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md — Narrative-driven seed script: 15 reps, 3 pods, 2 months history, streaks, battle, SPIFF, tier distribution
+- [ ] 04-02-PLAN.md — Motion animations: rank shift slides, XP counter tick, floating +XP, deal bell bounce
 
 ## Progress
 
