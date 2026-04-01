@@ -82,11 +82,11 @@
 ### Layout & Design
 
 - [x] **DSGN-01**: Dark scoreboard theme (bg: #0A0E17) with neon cyan accents (#06D6F2)
-- [ ] **DSGN-02**: Full-width stacked ticker layout with NO sidebar navigation
-- [ ] **DSGN-03**: Thin top bar (48px) with tab navigation (Live Board, Battles, Challenges)
+- [x] **DSGN-02**: Full-width stacked ticker layout with NO sidebar navigation
+- [x] **DSGN-03**: Thin top bar (48px) with tab navigation (Live Board, Battles, Challenges)
 - [x] **DSGN-04**: Typography: Barlow Condensed for headings/ranks, JetBrains Mono for data
-- [ ] **DSGN-05**: All 24 pre-generated SVG/PNG assets used as documented in DESIGN-SPEC.md
-- [ ] **DSGN-06**: Responsive design for desktop and tablet viewports
+- [x] **DSGN-05**: All 24 pre-generated SVG/PNG assets used as documented in DESIGN-SPEC.md
+- [x] **DSGN-06**: Responsive design for desktop and tablet viewports
 
 ### Animations
 
@@ -144,11 +144,11 @@
 | AUTH-03 | Phase 1 | Complete |
 | AUTH-04 | Phase 1 | Complete |
 | DSGN-01 | Phase 1 | Complete |
-| DSGN-02 | Phase 1 | Pending |
-| DSGN-03 | Phase 1 | Pending |
+| DSGN-02 | Phase 1 | Complete |
+| DSGN-03 | Phase 1 | Complete |
 | DSGN-04 | Phase 1 | Complete |
-| DSGN-05 | Phase 1 | Pending |
-| DSGN-06 | Phase 1 | Pending |
+| DSGN-05 | Phase 1 | Complete |
+| DSGN-06 | Phase 1 | Complete |
 | LEAD-01 | Phase 2 | Pending |
 | LEAD-02 | Phase 2 | Pending |
 | LEAD-03 | Phase 2 | Pending |
