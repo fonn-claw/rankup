@@ -1,6 +1,7 @@
 'use client'
 
-import { useOptimistic, startTransition, useState, useCallback } from 'react'
+import { useOptimistic, startTransition, useState, useCallback, useRef, useEffect } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 import { usePolling } from '@/lib/hooks/usePolling'
 import { getGapMessage, getTier } from '@/lib/queries/leaderboard'
 import { TIER_THRESHOLDS } from '@/lib/constants'
@@ -9,6 +10,7 @@ import { PinnedPosition } from './PinnedPosition'
 import { FilterBar } from './FilterBar'
 import { ActivityFAB } from './ActivityFAB'
 import { DealBellStack } from './DealBellStack'
+import { FloatingXp } from './FloatingXp'
 import type { FunnelResult } from '@/lib/queries/funnel'
 
 export interface BoardRow {
@@ -59,6 +61,21 @@ export function BoardClient({
 
   const [optimisticRows, setOptimisticRows] = useOptimistic(initialRows, reducer)
   const [tierPromotion, setTierPromotion] = useState<string | null>(null)
+  const [floatingXp, setFloatingXp] = useState<{ xp: number; id: number } | null>(null)
+  const xpAnimIdRef = useRef(0)
+
+  // Track previous ranks for glow animation
+  const prevRanksRef = useRef<Map<number, number>>(new Map())
+  const isInitialRef = useRef(true)
+
+  useEffect(() => {
+    if (isInitialRef.current) {
+      isInitialRef.current = false
+    }
+    const newMap = new Map<number, number>()
+    optimisticRows.forEach((r) => newMap.set(r.userId, r.rank))
+    prevRanksRef.current = newMap
+  }, [optimisticRows])
 
   const handleOptimisticUpdate = useCallback(
     (xpGain: number) => {
@@ -73,6 +90,10 @@ export function BoardClient({
           setTimeout(() => setTierPromotion(null), 5000)
         }
       }
+
+      xpAnimIdRef.current += 1
+      setFloatingXp({ xp: xpGain, id: xpAnimIdRef.current })
+      setTimeout(() => setFloatingXp(null), 1000)
 
       startTransition(() => {
         setOptimisticRows({ userId: currentUserId, xpGain })
@@ -115,46 +136,62 @@ export function BoardClient({
       />
 
       {currentUserRow && (
-        <PinnedPosition
-          rank={currentUserRow.rank}
-          name={currentUserName}
-          totalXp={currentUserRow.totalXp}
-          todayXp={currentUserRow.todayXp}
-          tier={getTier(currentUserRow.totalXp)}
-          streak={currentUserRow.streak}
-          gapMessage={gapMsg}
-          funnelData={currentUserFunnel}
-          tierPromotion={tierPromotion}
-        />
+        <div className="relative">
+          <PinnedPosition
+            rank={currentUserRow.rank}
+            name={currentUserName}
+            totalXp={currentUserRow.totalXp}
+            todayXp={currentUserRow.todayXp}
+            tier={getTier(currentUserRow.totalXp)}
+            streak={currentUserRow.streak}
+            gapMessage={gapMsg}
+            funnelData={currentUserFunnel}
+            tierPromotion={tierPromotion}
+          />
+          <FloatingXp xp={floatingXp?.xp ?? null} id={floatingXp?.id ?? 0} />
+        </div>
       )}
 
       <div className="space-y-0">
-        {optimisticRows.map((row) => {
-          const streakAtRisk =
-            row.userId === currentUserId &&
-            row.streak !== null &&
-            row.streak.active &&
-            row.todayXp === 0 &&
-            isAfterNoon
+        <AnimatePresence mode="popLayout">
+          {optimisticRows.map((row) => {
+            const streakAtRisk =
+              row.userId === currentUserId &&
+              row.streak !== null &&
+              row.streak.active &&
+              row.todayXp === 0 &&
+              isAfterNoon
 
-          return (
-            <ScoreboardRow
-              key={row.userId}
-              rank={row.rank}
-              userId={row.userId}
-              name={row.name}
-              tier={getTier(row.totalXp)}
-              totalXp={row.totalXp}
-              todayXp={row.todayXp}
-              prevRank={row.prevRank}
-              streak={row.streak}
-              isTop3={row.rank <= 3}
-              isCurrentUser={row.userId === currentUserId}
-              maxXp={maxXp}
-              streakAtRisk={streakAtRisk}
-            />
-          )
-        })}
+            const prevRank = prevRanksRef.current.get(row.userId)
+            const rankChanged = !isInitialRef.current && prevRank !== undefined && prevRank !== row.rank
+
+            return (
+              <motion.div
+                key={row.userId}
+                layout
+                layoutId={`row-${row.userId}`}
+                initial={false}
+                transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+              >
+                <ScoreboardRow
+                  rank={row.rank}
+                  userId={row.userId}
+                  name={row.name}
+                  tier={getTier(row.totalXp)}
+                  totalXp={row.totalXp}
+                  todayXp={row.todayXp}
+                  prevRank={row.prevRank}
+                  streak={row.streak}
+                  isTop3={row.rank <= 3}
+                  isCurrentUser={row.userId === currentUserId}
+                  maxXp={maxXp}
+                  streakAtRisk={streakAtRisk}
+                  rankChanged={rankChanged}
+                />
+              </motion.div>
+            )
+          })}
+        </AnimatePresence>
       </div>
 
       {currentUserRow && (

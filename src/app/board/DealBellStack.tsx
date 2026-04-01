@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 import { BellIcon } from '@/components/icons'
 
 interface DealBell {
@@ -51,24 +52,38 @@ export function DealBellStack() {
 
   return (
     <div className="fixed top-12 left-0 right-0 z-50 flex flex-col gap-1">
-      {bells.map((bell) => (
-        <div
-          key={bell.id}
-          className="bg-bg-elevated border-l-4 border-accent-green px-4 py-3 flex items-center gap-3 animate-[slideDown_300ms_ease-out]"
-          style={{
-            backgroundImage: 'url(/assets/bg-deal-bell.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="absolute inset-0 bg-bg-elevated/90" />
-          <BellIcon className="w-5 h-5 text-accent-green relative z-10 shrink-0" />
-          <span className="font-data text-sm text-text-primary relative z-10">
-            {bell.repName} closed {bell.dealName} &mdash; $
-            {bell.amount.toLocaleString()} &mdash; +{bell.xpEarned} XP
-          </span>
-        </div>
-      ))}
+      <AnimatePresence>
+        {bells.map((bell) => (
+          <motion.div
+            key={bell.id}
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -100, opacity: 0 }}
+            transition={{
+              type: 'spring',
+              stiffness: 500,
+              damping: 25,
+              mass: 0.8,
+            }}
+          >
+            <div
+              className="bg-bg-elevated border-l-4 border-accent-green px-4 py-3 flex items-center gap-3"
+              style={{
+                backgroundImage: 'url(/assets/bg-deal-bell.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div className="absolute inset-0 bg-bg-elevated/90" />
+              <BellIcon className="w-5 h-5 text-accent-green relative z-10 shrink-0" />
+              <span className="font-data text-sm text-text-primary relative z-10">
+                {bell.repName} closed {bell.dealName} &mdash; $
+                {bell.amount.toLocaleString()} &mdash; +{bell.xpEarned} XP
+              </span>
+            </div>
+          </motion.div>
+        ))}
+      </AnimatePresence>
     </div>
   )
 }

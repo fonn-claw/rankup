@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { TierBadge } from '@/components/TierBadge'
 import { FlameIcon, ArrowUpIcon, ArrowDownIcon, TargetIcon } from '@/components/icons'
 
@@ -18,6 +19,7 @@ interface ScoreboardRowProps {
   streakAtRisk: boolean
   conversionRate?: number | null
   coachingFlag?: boolean
+  rankChanged?: boolean
 }
 
 const TIER_BORDER_COLORS: Record<string, string> = {
@@ -41,7 +43,17 @@ export function ScoreboardRow({
   streakAtRisk,
   conversionRate,
   coachingFlag,
+  rankChanged,
 }: ScoreboardRowProps) {
+  const [glowing, setGlowing] = useState(false)
+
+  useEffect(() => {
+    if (rankChanged) {
+      setGlowing(true)
+      const timer = setTimeout(() => setGlowing(false), 1500)
+      return () => clearTimeout(timer)
+    }
+  }, [rankChanged])
   const bgClass =
     rank % 2 === 0 ? 'bg-bg-primary' : 'bg-bg-surface'
   const highlightClass = isCurrentUser ? 'bg-accent-cyan/5' : ''
@@ -96,10 +108,13 @@ export function ScoreboardRow({
   return (
     <div
       data-user-id={userId}
-      className={`h-16 flex items-center px-4 gap-3 ${bgClass} ${highlightClass} ${
+      className={`h-16 flex items-center px-4 gap-3 transition-shadow duration-500 ${bgClass} ${highlightClass} ${
         isTop3 ? 'border-l-2 shadow-[inset_0_0_20px_rgba(6,214,242,0.05)]' : ''
       }`}
-      style={isTop3 ? { borderLeftColor: TIER_BORDER_COLORS[tier] } : undefined}
+      style={{
+        ...(isTop3 ? { borderLeftColor: TIER_BORDER_COLORS[tier] } : undefined),
+        ...(glowing ? { boxShadow: '0 0 15px rgba(6, 214, 242, 0.4), inset 0 0 15px rgba(6, 214, 242, 0.1)' } : undefined),
+      }}
     >
       {/* Rank */}
       <div className="w-12 shrink-0 text-center">
