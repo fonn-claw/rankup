@@ -14,6 +14,7 @@ export default async function BoardPage({
 }: {
   searchParams: Promise<{ period?: string; team?: string }>
 }) {
+  try {
   const params = await searchParams
   const period = (['today', 'week', 'month', 'all'].includes(params.period ?? '')
     ? params.period
@@ -69,4 +70,8 @@ export default async function BoardPage({
       currentTeamId={teamId}
     />
   )
+  } catch (err) {
+    const message = err instanceof Error ? `${err.name}: ${err.message}\n\n${err.stack}` : String(err)
+    return <pre style={{color:'red',padding:'2rem',whiteSpace:'pre-wrap'}}>{message}</pre>
+  }
 }
