@@ -77,7 +77,7 @@
 
 ### Conversion Funnel
 
-- [ ] **FUNL-01**: Per-rep conversion visibility: calls → meetings → demos → deals with ratios
+- [ ] **FUNL-01**: Per-rep conversion visibility: calls -> meetings -> demos -> deals with ratios
 
 ### Layout & Design
 
@@ -90,17 +90,17 @@
 
 ### Animations
 
-- [ ] **ANIM-01**: Rank shift animation — rows physically slide to new position (600ms ease-in-out with cyan glow)
-- [ ] **ANIM-02**: XP counter tick — numbers count up from old to new value (400ms) with floating "+XP" indicator
-- [ ] **ANIM-03**: Deal bell drop — notification slides down with slight bounce
+- [ ] **ANIM-01**: Rank shift animation -- rows physically slide to new position (600ms ease-in-out with cyan glow)
+- [ ] **ANIM-02**: XP counter tick -- numbers count up from old to new value (400ms) with floating "+XP" indicator
+- [ ] **ANIM-03**: Deal bell drop -- notification slides down with slight bounce
 
 ### Demo Data
 
-- [ ] **SEED-01**: 15 sales reps across 3 pods (Alpha, Beta, Gamma — 5 each) for "Velocity SaaS"
+- [ ] **SEED-01**: 15 sales reps across 3 pods (Alpha, Beta, Gamma -- 5 each) for "Velocity SaaS"
 - [ ] **SEED-02**: 2 months of historical activity data with realistic distribution
 - [ ] **SEED-03**: Specific scenario: 1 rep on 22-day streak (Gold), 1 rep who broke streak yesterday
 - [ ] **SEED-04**: Active team battle: Alpha vs Beta (close race)
-- [ ] **SEED-05**: Active SPIFF: "March Madness — most meetings booked this week"
+- [ ] **SEED-05**: Active SPIFF: "March Madness -- most meetings booked this week"
 - [ ] **SEED-06**: Tier distribution: 2 Gold, 5 Silver, 8 Bronze
 - [ ] **SEED-07**: Current day has live morning activity from some reps
 
@@ -126,7 +126,7 @@
 
 | Feature | Reason |
 |---------|--------|
-| CRM integration | Demo app — standalone, no external API dependencies |
+| CRM integration | Demo app -- standalone, no external API dependencies |
 | OAuth/SSO | Email/password sufficient for 3 demo accounts |
 | Mobile native app | Responsive web covers demo needs |
 | Real-time WebSockets | Polling + optimistic UI sufficient for demo |
@@ -139,13 +139,69 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (populated during roadmap creation) | | |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| AUTH-04 | Phase 1 | Pending |
+| DSGN-01 | Phase 1 | Pending |
+| DSGN-02 | Phase 1 | Pending |
+| DSGN-03 | Phase 1 | Pending |
+| DSGN-04 | Phase 1 | Pending |
+| DSGN-05 | Phase 1 | Pending |
+| DSGN-06 | Phase 1 | Pending |
+| LEAD-01 | Phase 2 | Pending |
+| LEAD-02 | Phase 2 | Pending |
+| LEAD-03 | Phase 2 | Pending |
+| LEAD-04 | Phase 2 | Pending |
+| LEAD-05 | Phase 2 | Pending |
+| LEAD-06 | Phase 2 | Pending |
+| ACTV-01 | Phase 2 | Pending |
+| ACTV-02 | Phase 2 | Pending |
+| ACTV-03 | Phase 2 | Pending |
+| ACTV-04 | Phase 2 | Pending |
+| ACTV-05 | Phase 2 | Pending |
+| TIER-01 | Phase 2 | Pending |
+| TIER-02 | Phase 2 | Pending |
+| TIER-03 | Phase 2 | Pending |
+| STRK-01 | Phase 2 | Pending |
+| STRK-02 | Phase 2 | Pending |
+| STRK-03 | Phase 2 | Pending |
+| STRK-04 | Phase 2 | Pending |
+| BELL-01 | Phase 2 | Pending |
+| BELL-02 | Phase 2 | Pending |
+| BELL-03 | Phase 2 | Pending |
+| FUNL-01 | Phase 2 | Pending |
+| BTTL-01 | Phase 3 | Pending |
+| BTTL-02 | Phase 3 | Pending |
+| BTTL-03 | Phase 3 | Pending |
+| BTTL-04 | Phase 3 | Pending |
+| SPFF-01 | Phase 3 | Pending |
+| SPFF-02 | Phase 3 | Pending |
+| SPFF-03 | Phase 3 | Pending |
+| MGMT-01 | Phase 3 | Pending |
+| MGMT-02 | Phase 3 | Pending |
+| MGMT-03 | Phase 3 | Pending |
+| MGMT-04 | Phase 3 | Pending |
+| ADMN-01 | Phase 3 | Pending |
+| ADMN-02 | Phase 3 | Pending |
+| ADMN-03 | Phase 3 | Pending |
+| ADMN-04 | Phase 3 | Pending |
+| SEED-01 | Phase 4 | Pending |
+| SEED-02 | Phase 4 | Pending |
+| SEED-03 | Phase 4 | Pending |
+| SEED-04 | Phase 4 | Pending |
+| SEED-05 | Phase 4 | Pending |
+| SEED-06 | Phase 4 | Pending |
+| SEED-07 | Phase 4 | Pending |
+| ANIM-01 | Phase 4 | Pending |
+| ANIM-02 | Phase 4 | Pending |
+| ANIM-03 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 47 total
-- Mapped to phases: 0
-- Unmapped: 47 ⚠️
+- v1 requirements: 57 total
+- Mapped to phases: 57
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-01*
-*Last updated: 2026-04-01 after initial definition*
+*Last updated: 2026-04-01 after roadmap creation*
