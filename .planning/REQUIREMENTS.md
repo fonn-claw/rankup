@@ -52,7 +52,7 @@
 ### Challenges/SPIFFs
 
 - [x] **SPFF-01**: Active challenges display with title, description, progress bar, and countdown timer
-- [ ] **SPFF-02**: Manager can create time-limited SPIFF challenges with goals and rewards
+- [x] **SPFF-02**: Manager can create time-limited SPIFF challenges with goals and rewards
 - [x] **SPFF-03**: Rep sees their progress vs challenge goal
 
 ### Deal Bell
@@ -63,10 +63,10 @@
 
 ### Manager View
 
-- [ ] **MGMT-01**: Manager sees team activity heatmap strip (green=active, amber=idle, red=no activity)
-- [ ] **MGMT-02**: Manager sees scoreboard with additional conversion rate column
-- [ ] **MGMT-03**: Reps with high activity but low conversion are flagged (coaching opportunity)
-- [ ] **MGMT-04**: Manager can create SPIFFs from the command center
+- [x] **MGMT-01**: Manager sees team activity heatmap strip (green=active, amber=idle, red=no activity)
+- [x] **MGMT-02**: Manager sees scoreboard with additional conversion rate column
+- [x] **MGMT-03**: Reps with high activity but low conversion are flagged (coaching opportunity)
+- [x] **MGMT-04**: Manager can create SPIFFs from the command center
 
 ### Admin View
 
@@ -176,12 +176,12 @@
 | BTTL-03 | Phase 3 | Complete |
 | BTTL-04 | Phase 3 | Complete |
 | SPFF-01 | Phase 3 | Complete |
-| SPFF-02 | Phase 3 | Pending |
+| SPFF-02 | Phase 3 | Complete |
 | SPFF-03 | Phase 3 | Complete |
-| MGMT-01 | Phase 3 | Pending |
-| MGMT-02 | Phase 3 | Pending |
-| MGMT-03 | Phase 3 | Pending |
-| MGMT-04 | Phase 3 | Pending |
+| MGMT-01 | Phase 3 | Complete |
+| MGMT-02 | Phase 3 | Complete |
+| MGMT-03 | Phase 3 | Complete |
+| MGMT-04 | Phase 3 | Complete |
 | ADMN-01 | Phase 3 | Complete |
 | ADMN-02 | Phase 3 | Complete |
 | ADMN-03 | Phase 3 | Complete |
