@@ -9,7 +9,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 
   return (
     <div className="min-h-screen bg-bg-primary flex flex-col">
-      <TopBar activePath="/admin" />
+      <TopBar />
       <main className="flex-1 w-full">
         {children}
       </main>

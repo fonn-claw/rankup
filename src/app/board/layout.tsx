@@ -8,7 +8,7 @@ export default async function BoardLayout({ children }: { children: React.ReactN
 
   return (
     <div className="min-h-screen bg-bg-primary flex flex-col">
-      <TopBar activePath="/board" />
+      <TopBar />
       <main className="flex-1 w-full">
         {children}
       </main>
