@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Phase 2 context gathered
-last_updated: "2026-04-01T09:16:05.272Z"
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-04-01T09:35:13.447Z"
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 4
+  completed_plans: 3
 ---
 
 # Project State
@@ -19,11 +19,11 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-01)
 
 **Core value:** Sales reps can see their live rank and know exactly what activity it takes to move up
-**Current focus:** Phase 01 — foundation
+**Current focus:** Phase 02 — core-game-loop
 
 ## Current Position
 
-Phase: 01 (foundation) — EXECUTING
+Phase: 02 (core-game-loop) — EXECUTING
 Plan: 2 of 2
 
 ## Performance Metrics
@@ -48,6 +48,7 @@ Plan: 2 of 2
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 7min | 2 tasks | 17 files |
 | Phase 01-foundation P02 | 3min | 2 tasks | 21 files |
+| Phase 02 P01 | 2min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -64,6 +65,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: proxy.ts checks cookie existence only; role checks in server components
 - [Phase 01-foundation]: TopBar uses activePath prop from layout instead of usePathname client hook
 - [Phase 01-foundation]: Auth checks in layout.tsx files, pages no longer check auth individually
+- [Phase 02]: Used db.execute with raw SQL CTEs for leaderboard ranking -- Drizzle ORM query builder lacks window function support
+- [Phase 02]: Previous-period ranks computed via separate query and diffed in app code
 
 ### Pending Todos
 
@@ -77,6 +80,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T09:16:05.270Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-core-game-loop/02-CONTEXT.md
+Last session: 2026-04-01T09:35:13.443Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: None

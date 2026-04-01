@@ -14,30 +14,30 @@
 
 ### Leaderboard
 
-- [ ] **LEAD-01**: Rep sees live ranked list of all reps with rank number, name, tier badge, XP, daily change, and streak
-- [ ] **LEAD-02**: Rep sees their own position pinned at top with gap-to-next-rank ("2 calls to pass #6")
-- [ ] **LEAD-03**: Leaderboard supports time period filtering (Today, This Week, This Month, All Time)
-- [ ] **LEAD-04**: Leaderboard supports team filtering (All, Alpha, Beta, Gamma)
+- [x] **LEAD-01**: Rep sees live ranked list of all reps with rank number, name, tier badge, XP, daily change, and streak
+- [x] **LEAD-02**: Rep sees their own position pinned at top with gap-to-next-rank ("2 calls to pass #6")
+- [x] **LEAD-03**: Leaderboard supports time period filtering (Today, This Week, This Month, All Time)
+- [x] **LEAD-04**: Leaderboard supports team filtering (All, Alpha, Beta, Gamma)
 - [ ] **LEAD-05**: Top 3 rows have visual emphasis (left-border glow in tier color)
-- [ ] **LEAD-06**: Rank movement arrows show position changes (up/down/stable)
+- [x] **LEAD-06**: Rank movement arrows show position changes (up/down/stable)
 
 ### Activity & XP
 
-- [ ] **ACTV-01**: Rep can log activities via floating action button (Call, Meeting, Demo, Proposal, Deal)
-- [ ] **ACTV-02**: Each activity type awards correct XP (Call:10, Meeting:50, Demo:75, Proposal:100, Deal:500)
-- [ ] **ACTV-03**: XP is calculated and displayed in real-time after activity is logged
-- [ ] **ACTV-04**: Deal closing includes revenue amount for bonus XP calculation
-- [ ] **ACTV-05**: Activity log panel shows XP values for each action type
+- [x] **ACTV-01**: Rep can log activities via floating action button (Call, Meeting, Demo, Proposal, Deal)
+- [x] **ACTV-02**: Each activity type awards correct XP (Call:10, Meeting:50, Demo:75, Proposal:100, Deal:500)
+- [x] **ACTV-03**: XP is calculated and displayed in real-time after activity is logged
+- [x] **ACTV-04**: Deal closing includes revenue amount for bonus XP calculation
+- [x] **ACTV-05**: Activity log panel shows XP values for each action type
 
 ### Tiers
 
-- [ ] **TIER-01**: Reps are assigned tiers based on XP (Bronze: 0-5000, Silver: 5000-15000, Gold: 15000+)
+- [x] **TIER-01**: Reps are assigned tiers based on XP (Bronze: 0-5000, Silver: 5000-15000, Gold: 15000+)
 - [ ] **TIER-02**: Tier badges display on scoreboard rows using pre-generated SVG assets
 - [ ] **TIER-03**: Tier promotion is visible and celebrated when thresholds are crossed
 
 ### Streaks
 
-- [ ] **STRK-01**: System tracks consecutive days of hitting minimum activity threshold (15+ calls)
+- [x] **STRK-01**: System tracks consecutive days of hitting minimum activity threshold (15+ calls)
 - [ ] **STRK-02**: Active streak displays flame icon with day count on scoreboard
 - [ ] **STRK-03**: Broken streak displays muted/strikethrough indicator
 - [ ] **STRK-04**: Streak at risk (end of day, no qualifying activity) shows pulsing amber indicator
@@ -57,8 +57,8 @@
 
 ### Deal Bell
 
-- [ ] **BELL-01**: When a deal closes, a notification bar slides down visible to all users
-- [ ] **BELL-02**: Deal bell shows rep name, deal name, amount, and XP earned
+- [x] **BELL-01**: When a deal closes, a notification bar slides down visible to all users
+- [x] **BELL-02**: Deal bell shows rep name, deal name, amount, and XP earned
 - [ ] **BELL-03**: Deal bell auto-dismisses after 8 seconds, stacks if multiple fire
 
 ### Manager View
@@ -77,7 +77,7 @@
 
 ### Conversion Funnel
 
-- [ ] **FUNL-01**: Per-rep conversion visibility: calls -> meetings -> demos -> deals with ratios
+- [x] **FUNL-01**: Per-rep conversion visibility: calls -> meetings -> demos -> deals with ratios
 
 ### Layout & Design
 
@@ -149,28 +149,28 @@
 | DSGN-04 | Phase 1 | Complete |
 | DSGN-05 | Phase 1 | Complete |
 | DSGN-06 | Phase 1 | Complete |
-| LEAD-01 | Phase 2 | Pending |
-| LEAD-02 | Phase 2 | Pending |
-| LEAD-03 | Phase 2 | Pending |
-| LEAD-04 | Phase 2 | Pending |
+| LEAD-01 | Phase 2 | Complete |
+| LEAD-02 | Phase 2 | Complete |
+| LEAD-03 | Phase 2 | Complete |
+| LEAD-04 | Phase 2 | Complete |
 | LEAD-05 | Phase 2 | Pending |
-| LEAD-06 | Phase 2 | Pending |
-| ACTV-01 | Phase 2 | Pending |
-| ACTV-02 | Phase 2 | Pending |
-| ACTV-03 | Phase 2 | Pending |
-| ACTV-04 | Phase 2 | Pending |
-| ACTV-05 | Phase 2 | Pending |
-| TIER-01 | Phase 2 | Pending |
+| LEAD-06 | Phase 2 | Complete |
+| ACTV-01 | Phase 2 | Complete |
+| ACTV-02 | Phase 2 | Complete |
+| ACTV-03 | Phase 2 | Complete |
+| ACTV-04 | Phase 2 | Complete |
+| ACTV-05 | Phase 2 | Complete |
+| TIER-01 | Phase 2 | Complete |
 | TIER-02 | Phase 2 | Pending |
 | TIER-03 | Phase 2 | Pending |
-| STRK-01 | Phase 2 | Pending |
+| STRK-01 | Phase 2 | Complete |
 | STRK-02 | Phase 2 | Pending |
 | STRK-03 | Phase 2 | Pending |
 | STRK-04 | Phase 2 | Pending |
-| BELL-01 | Phase 2 | Pending |
-| BELL-02 | Phase 2 | Pending |
+| BELL-01 | Phase 2 | Complete |
+| BELL-02 | Phase 2 | Complete |
 | BELL-03 | Phase 2 | Pending |
-| FUNL-01 | Phase 2 | Pending |
+| FUNL-01 | Phase 2 | Complete |
 | BTTL-01 | Phase 3 | Pending |
 | BTTL-02 | Phase 3 | Pending |
 | BTTL-03 | Phase 3 | Pending |
