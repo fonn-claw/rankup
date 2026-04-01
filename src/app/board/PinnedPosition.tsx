@@ -3,6 +3,7 @@
 import { TierBadge } from '@/components/TierBadge'
 import { FlameIcon } from '@/components/icons'
 import { ConversionFunnel } from './ConversionFunnel'
+import { AnimatedCounter } from './AnimatedCounter'
 
 interface PinnedPositionProps {
   rank: number
@@ -37,7 +38,7 @@ export function PinnedPosition({
         <span className="font-data text-sm text-text-primary">{name}</span>
         <TierBadge tier={tier} />
         <span className="font-data text-lg text-text-primary ml-auto">
-          {totalXp.toLocaleString()} XP
+          <AnimatedCounter value={totalXp} /> XP
         </span>
         {todayXp > 0 && (
           <span className="font-data text-sm text-accent-green">
