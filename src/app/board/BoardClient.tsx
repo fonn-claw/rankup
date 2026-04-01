@@ -3,7 +3,7 @@
 import { useOptimistic, startTransition, useState, useCallback, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { usePolling } from '@/lib/hooks/usePolling'
-import { getGapMessage, getTier } from '@/lib/queries/leaderboard'
+import { getGapMessage, getTier } from '@/lib/utils/leaderboard-utils'
 import { TIER_THRESHOLDS } from '@/lib/constants'
 import { ScoreboardRow } from './ScoreboardRow'
 import { PinnedPosition } from './PinnedPosition'

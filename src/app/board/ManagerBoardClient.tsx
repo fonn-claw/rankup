@@ -2,7 +2,7 @@
 
 import { useOptimistic, startTransition, useState } from 'react'
 import { usePolling } from '@/lib/hooks/usePolling'
-import { getTier } from '@/lib/queries/leaderboard'
+import { getTier } from '@/lib/utils/leaderboard-utils'
 import { ScoreboardRow } from './ScoreboardRow'
 import { FilterBar } from './FilterBar'
 import { DealBellStack } from './DealBellStack'
