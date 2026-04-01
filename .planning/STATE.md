@@ -4,12 +4,12 @@ milestone: v1.0
 milestone_name: milestone
 status: unknown
 stopped_at: Phase 3 context gathered
-last_updated: "2026-04-01T09:46:20.188Z"
+last_updated: "2026-04-01T09:58:30.989Z"
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 7
+  completed_plans: 5
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-01)
 
 **Core value:** Sales reps can see their live rank and know exactly what activity it takes to move up
-**Current focus:** Phase 02 — core-game-loop (COMPLETE)
+**Current focus:** Phase 03 — competitions-and-role-views
 
 ## Current Position
 
-Phase: 02 (core-game-loop) — COMPLETE
-Plan: 2 of 2 (all complete)
+Phase: 03 (competitions-and-role-views) — EXECUTING
+Plan: 2 of 3
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Plan: 2 of 2 (all complete)
 | Phase 01-foundation P02 | 3min | 2 tasks | 21 files |
 | Phase 02 P01 | 2min | 2 tasks | 6 files |
 | Phase 02 P02 | 3min | 2 tasks | 9 files |
+| Phase 03 P01 | 7min | 2 tasks | 13 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,9 @@ Recent decisions affecting current work:
 - [Phase 02]: useOptimistic reducer re-sorts and re-ranks rows on XP update
 - [Phase 02]: Tier promotion detection purely client-side via TIER_THRESHOLDS comparison
 - [Phase 02]: DealBellStack seenIds stored in useRef to avoid stale closure
+- [Phase 03]: Refactored TopBar to extract TopBarNav client component using useSelectedLayoutSegment for active tab detection
+- [Phase 03]: Battle XP aggregation uses CTE with json_agg for per-member breakdown in single query
+- [Phase 03]: useCountdown hook switches to 1-second interval when under 1 hour remaining
 
 ### Pending Todos
 
@@ -86,6 +90,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T09:46:20.186Z
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-competitions-and-role-views/03-CONTEXT.md
+Last session: 2026-04-01T10:07:03Z
+Stopped at: Completed 03-01-PLAN.md
+Resume file: .planning/phases/03-competitions-and-role-views/03-01-SUMMARY.md

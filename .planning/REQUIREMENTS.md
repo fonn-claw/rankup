@@ -44,16 +44,16 @@
 
 ### Team Battles
 
-- [ ] **BTTL-01**: Weekly team battles show two teams in versus layout with XP totals
-- [ ] **BTTL-02**: Battle displays countdown timer for time remaining
-- [ ] **BTTL-03**: Battle shows per-member XP contributions
-- [ ] **BTTL-04**: Leading team has visual emphasis (glow effect)
+- [x] **BTTL-01**: Weekly team battles show two teams in versus layout with XP totals
+- [x] **BTTL-02**: Battle displays countdown timer for time remaining
+- [x] **BTTL-03**: Battle shows per-member XP contributions
+- [x] **BTTL-04**: Leading team has visual emphasis (glow effect)
 
 ### Challenges/SPIFFs
 
-- [ ] **SPFF-01**: Active challenges display with title, description, progress bar, and countdown timer
+- [x] **SPFF-01**: Active challenges display with title, description, progress bar, and countdown timer
 - [ ] **SPFF-02**: Manager can create time-limited SPIFF challenges with goals and rewards
-- [ ] **SPFF-03**: Rep sees their progress vs challenge goal
+- [x] **SPFF-03**: Rep sees their progress vs challenge goal
 
 ### Deal Bell
 
@@ -171,13 +171,13 @@
 | BELL-02 | Phase 2 | Complete |
 | BELL-03 | Phase 2 | Complete |
 | FUNL-01 | Phase 2 | Complete |
-| BTTL-01 | Phase 3 | Pending |
-| BTTL-02 | Phase 3 | Pending |
-| BTTL-03 | Phase 3 | Pending |
-| BTTL-04 | Phase 3 | Pending |
-| SPFF-01 | Phase 3 | Pending |
+| BTTL-01 | Phase 3 | Complete |
+| BTTL-02 | Phase 3 | Complete |
+| BTTL-03 | Phase 3 | Complete |
+| BTTL-04 | Phase 3 | Complete |
+| SPFF-01 | Phase 3 | Complete |
 | SPFF-02 | Phase 3 | Pending |
-| SPFF-03 | Phase 3 | Pending |
+| SPFF-03 | Phase 3 | Complete |
 | MGMT-01 | Phase 3 | Pending |
 | MGMT-02 | Phase 3 | Pending |
 | MGMT-03 | Phase 3 | Pending |
